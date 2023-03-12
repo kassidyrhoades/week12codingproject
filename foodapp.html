@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <title>FoodApp</title>
+</head>
+<body>
+	<div class="container">
+		<h1 class="text-center my-5">Food Tracking App</h1>
+
+		<!-- Form to create new meals -->
+		<form id="meal-form">
+			<div class="form-group">
+				<label for="name">Meal Name:</label>
+				<input type="text" class="form-control" id="name" required>
+			</div>
+			<div class="form-group">
+				<label for="calories">Calories:</label>
+				<input type="number" class="form-control" id="calories" required>
+			</div>
+			<div class="form-group">
+				<label for="date">Date:</label>
+				<input type="date" class="form-control" id="date" required>
+			</div>
+			<button type="submit" class="btn btn-primary">Add Meal</button>
+		</form>
+
+		<!-- Table to display existing meals -->
+		<table class="table mt-5">
+			<thead>
+				<tr>
+					<th>Meal Name</th>
+					<th>Calories</th>
+					<th>Date</th>
+					<th>Actions</th>
+				</tr>
+			</thead>
+			<tbody id="meal-list"></tbody>
+		</table>
+	</div>
+  
+    <script src="foodapp.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
